@@ -5,15 +5,22 @@ function concatArray(array1, array2) {
   arr1 = array1
   let arr2 = new Array()
   arr2 = array2
-  //code here
-  if (arr1 == [] && arr2 !== []) {
-    return arr2;
-  } else if (arr1 !== [] && arr2 == []) {
-    return arr1;
-  }else if(arr1 != [] && arr2 != []){
-    return arr1.concat(arr2)
-  }else{
-    return 'empty array'
+
+  if(arr1==[]&&arr2==[]){
+    return arr1
+  }else if(array1 ==null && array2 == null){
+    return undefined
+  }else if(array1 == undefined && array2 == undefined){
+    return undefined
   }
+   else if((array1 ==null || array1 == undefined) && (array2 != null || array2 != undefined)){
+    return arr2
+  } else if ((array2 ==null || array2 == undefined) && (array1 != null || array1 != undefined)){
+    return arr1
+  }
+  else{
+    return arr1.concat(arr2)
+  }
+  
 }
 module.exports = concatArray;
