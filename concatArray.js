@@ -19,6 +19,7 @@ function concatArray(array1, array2) {
     return arr1
   }
   else{
+    
     return arr1.concat(arr2)
   }
   
